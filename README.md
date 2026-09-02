@@ -4,7 +4,7 @@
 <tr>
 <td><img src="icon.png" alt="Logo du plugin" width="400"/></td>
 <td>
-<p>Le plugin <strong>Sentinel2Timelapse</strong> permet d'automatiser la <strong>recherche</strong>, la <strong>visualisation par frise temporelle (timelapse)</strong> et l'<strong>export de mosaïques d'imagerie satellite Sentinel-2 (L2A)</strong> via l'API STAC du <strong>Microsoft Planetary Computer</strong>. L'outil se base directement sur l'<strong>emprise visuelle active du canevas QGIS</strong>, ce qui le rend idéal pour l'analyse ciblée de zones restreintes et locales de type <strong>communes</strong>. Il génère un <strong>rapport HTML interactif autonome</strong> (exploitant <strong>Leaflet</strong> et <strong>JSZip</strong>) permettant une exploration fluide des dates et un téléchargement propre des sources organisées sous forme d'<strong>archives ZIP par date</strong>.</p>
+<p>Le plugin <strong>Sentinel-2 Timelapse</strong> permet d'automatiser la <strong>recherche</strong>, la <strong>visualisation par frise temporelle (timelapse)</strong> et l'<strong>export de mosaïques d'imagerie satellite Sentinel-2 (L2A)</strong> via l'API STAC du <strong>Microsoft Planetary Computer</strong>. L'outil se base directement sur l'<strong>emprise visuelle active du canevas QGIS</strong>, ce qui le rend idéal pour l'analyse ciblée de zones restreintes et locales de type <strong>communes</strong>. Il génère un <strong>rapport HTML interactif autonome</strong> (exploitant <strong>Leaflet</strong> et <strong>JSZip</strong>) permettant une exploration fluide des dates et un téléchargement propre des sources organisées sous forme d'<strong>archives ZIP par date</strong>.</p>
 </td>
 </tr>
 </table>
