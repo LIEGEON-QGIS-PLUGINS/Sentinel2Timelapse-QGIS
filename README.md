@@ -1,10 +1,10 @@
-# Raster from LiDAR
+# Sentinel-2 Timelapse
 
 <table>
 <tr>
 <td><img src="icon.png" alt="Logo du plugin" width="400"/></td>
 <td>
-<p>Le plugin <strong>Raster from LiDAR</strong> permet de générer automatiquement des <strong>MNT (Modèles Numériques de Terrain)</strong> et des <strong>ombrages</strong> à partir de fichiers LiDAR classifiés (.las ou .laz). L’utilisateur peut <strong>sélectionner les classes de points à conserver</strong> (par ex. sol, végétation basse, etc.) afin de personnaliser le MNT produit. Il offre également la possibilité de <strong>remplir les valeurs nulles</strong> sur le MNT à l'aide d'une interpolation IDW (Inverse Distance Weighting).</p>
+<p>Le plugin <strong>Sentinel2Timelapse</strong> permet d'automatiser la <strong>recherche</strong>, la <strong>visualisation par frise temporelle (timelapse)</strong> et l'<strong>export de mosaïques d'imagerie satellite Sentinel-2 (L2A)</strong> via l'API STAC du <strong>Microsoft Planetary Computer</strong>. L'outil se base directement sur l'<strong>emprise visuelle active du canevas QGIS</strong>, ce qui le rend idéal pour l'analyse ciblée de zones restreintes et locales de type <strong>communes</strong>. Il génère un <strong>rapport HTML interactif autonome</strong> (exploitant <strong>Leaflet</strong> et <strong>JSZip</strong>) permettant une exploration fluide des dates et un téléchargement propre des sources organisées sous forme d'<strong>archives ZIP par date</strong>.</p>
 </td>
 </tr>
 </table>
@@ -20,8 +20,8 @@ Il est possible que le plugin fonctionne avec d’autres versions de QGIS, mais 
 
 - **Dépendances (incluses nativement avec QGIS) :**
   - PyQt5
-  - QGIS Processing Toolbox
-  - GDAL
+  - QGIS Core / API
+  - requests (bibliothèque Python pour l'API STAC)
 
 > ⚠️ Aucune installation externe n’est nécessaire.
 
@@ -29,7 +29,7 @@ Il est possible que le plugin fonctionne avec d’autres versions de QGIS, mais 
 
 ## Installation
 
-1. Téléchargez la dernière version dans [Releases](https://github.com/LIEGEON-QGIS-PLUGINS/RasterFromLiDAR-QGIS/releases) (ZIP).  
+1. Téléchargez la dernière version dans [Releases](https://github.com/LIEGEON-QGIS-PLUGINS/Sentinel2Timelapse-QGIS/releases) (ZIP).  
 2. Dans QGIS, allez dans `Extensions > Installer une extension depuis un fichier ZIP`.  
 3. Sélectionnez le fichier ZIP téléchargé et installez-le.  
 4. Redémarrez QGIS si nécessaire.  
@@ -39,19 +39,12 @@ Il est possible que le plugin fonctionne avec d’autres versions de QGIS, mais 
 ## Utilisation
 
 1. Ouvrez le plugin via le menu `LiDAR Tools > Raster from LiDAR`.  
-2. Sélectionnez le **dossier contenant les fichiers LiDAR**.  
-3. Définissez les dossiers de sortie pour le MNT et l’ombrage.
-4. Configurez les paramètres liés aux classes de points.  
-5. Optionnel : activez le remplissage des valeurs nulles et configurez les paramètres de tuiles.  
-6. Cliquez sur **Lancer le traitement**.  
+2. Positionnez votre vue sur l'emprise géographique souhaitée (idéalement une commune ou une zone restreinte). 
+3. Configurez la période de recherche et le pas temporel pour le timelapse.
+4. Lancez la recherche des dalles disponibles sur l'emprise de l'écran. 
+5. Générez et ouvrez le rapport HTML interactif pour manipuler la frise temporelle et télécharger les archives ZIP par date.
 
-> ⚠️ **Attention :** le traitement peut prendre beaucoup de temps selon la taille et le nombre de fichiers LiDAR.
-
----
-
-## Données de test
-
-Vous pouvez tester le plugin avec des fichiers LiDAR exemple disponibles ici : [Lien vers données test du LiDAR HD de l'IGN](https://geoservices.ign.fr/lidarhd)
+> ⚠️ **Attention :** le temps de génération dépend du nombre de dates et de dalles trouvées sur l'emprise.
 
 ---
 
