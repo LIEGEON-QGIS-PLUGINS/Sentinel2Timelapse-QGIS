@@ -38,7 +38,7 @@ Il est possible que le plugin fonctionne avec d’autres versions de QGIS, mais 
 
 ## Utilisation
 
-1. Ouvrez le plugin via le menu `LiDAR Tools > Sentinel-2 Timelapse`.  
+1. Ouvrez le plugin via le menu `LiDAR Tools >  Sentinel-2 Timelapse`.  
 2. Positionnez votre vue sur l'emprise géographique souhaitée (idéalement une commune ou une zone restreinte). 
 3. Configurez la période de recherche et le pas temporel pour le timelapse.
 4. Lancez la recherche des dalles disponibles sur l'emprise de l'écran. 
